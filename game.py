@@ -6,7 +6,7 @@ from pygame.locals import *
 import random 
 import time
 
-# import custom modules 
+#import custom modules 
 #import battle_ship
 #import submarine
 #import ocean
