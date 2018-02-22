@@ -21,32 +21,12 @@ void loop()
 	Water_val = analogRead(water); //Read data from analog pin and store it to value variable
 	
 	if (Water_val<=480){ 
-		Serial.println("Water level: 0mm - Empty!"); 
+		Serial.println("PUT OUT THE FIRE"); 
 	}
-	else if (Water_val>480 && Water_val<=530){ 
-		Serial.println("Water level: 0mm to 5mm"); 
-	}
-	else if (Water_val>530 && Water_val<=615){ 
-		Serial.println("Water level: 5mm to 10mm"); 
-	}
-	else if (Water_val>615 && Water_val<=660){ 
-		Serial.println("Water level: 10mm to 15mm"); 
-	}	
-	else if (Water_val>660 && Water_val<=680){ 
-		Serial.println("Water level: 15mm to 20mm"); 
-	}
-	else if (Water_val>680 && Water_val<=690){ 
-		Serial.println("Water level: 20mm to 25mm"); 
-	}
-	else if (Water_val>690 && Water_val<=700){ 
-		Serial.println("Water level: 25mm to 30mm"); 
-	}
-	else if (Water_val>700 && Water_val<=705){ 
-		Serial.println("Water level: 30mm to 35mm"); 
-	}
-	else if (Water_val>705){ 
-		Serial.println("Water level: 35mm to 40mm"); 
+	else if (Water_val>480 && Water_val < 630){ 
+		Serial.println("Fire Partly Relinquished Keep Going"); 
 	}
 	
+
 	delay(5000); // Check for new value every 5 sec
 }
