@@ -5,6 +5,7 @@ import pygame, sys
 from pygame.locals import *
 import random 
 import time
+import shapes
 
 #import custom modules 
 #import battle_ship
@@ -22,10 +23,13 @@ window = pygame.display.set_mode((1000,1000),0,32)
 fpsClock = pygame.time.Clock()
 FPS = 120
 
+torpedo = shapes.Torpedo()
+
 #Drawing world 
 def draw_world(surf):
   surf.fill(NAVYBLUE)
   pygame.display.update()
+  torpedo.draw(surf)
 
 while(True):
 	draw_world(window)
