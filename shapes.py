@@ -37,8 +37,26 @@ class Ship(pygame.sprite.Sprite):
     self.Vy += dy
     
   def move(self):
-    self.x += (self.Vx * (1.0/20))
-    self.y += (self.Vy * (1.0/20))
+    if(self.x >= 0):
+      self.x += (self.Vx * (1.0/20))
+    else:
+      self.x =0
+      self.Vx=0
+    if(self.x <= 1000):
+      self.x += (self.Vx * (1.0/20))
+    else:
+      self.x =1000
+      self.Vx=0
+    if(self.y >= 0):
+      self.y += (self.Vy * (1.0/20))
+    else:
+      self.y =0
+      self.Vy=0
+    if(self.y <= 1000):
+      self.y += (self.Vy * (1.0/20))
+    else:
+      self.y =1000
+      self.Vy=0
     self.rect.center = (self.x,self.y)
     
 
