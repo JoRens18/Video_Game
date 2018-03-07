@@ -46,7 +46,7 @@ class Submarine(pygame.sprite.Sprite):
   def __init__(self):
     super(Submarine,self).__init__()
     pygame.sprite.Sprite.__init__(self)
-    self.image = pygame.image.load('image/submarine.png')
+    self.image = pygame.image.load('images/submarine.png')
     self.rect = self.image.get_rect()
     self.rect.center = (500,750)
   
