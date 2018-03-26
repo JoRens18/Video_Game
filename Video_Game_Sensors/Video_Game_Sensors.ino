@@ -35,15 +35,14 @@ void loop()
   if (c =='p'){
         tone(buzzer, 1000); // Send 1KHz sound signal...
 	water_val = analogRead(water); //Read data from analog pin and store it to value variable
-	if (water_val<=50){ 
-		Serial.println("PUT OUT THE FIRE"); 
+	Serial.println(water_val);
+        if (water_val<=50){  
                 analogWrite(redPin,255);
                 analogWrite(greenPin,0);
                 analogWrite(bluePin,0);
 
 	}
-	else if (water_val>50){ 
-		Serial.println("Fire Relinquished"); 
+	else if (water_val> 50){ 
                 analogWrite(redPin,0);
                 analogWrite(greenPin,255);
                 analogWrite(bluePin,0);
