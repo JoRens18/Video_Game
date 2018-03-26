@@ -62,12 +62,12 @@ while(True):
     if event.type == QUIT:
       pygame.quit()
       sys.exit()
-  while(fire == 1 and water < 20):
+  while(fire == 1 and water < 50):
     displayMessage(window,"Fire!")
-    #s.write('P')
-    #l=s.readline()
-    #if not len(l) == 0:
-    #  water = int(l)
+    s.write('p')
+    l=s.readline()
+    if not len(l) == 0:
+      water = int(l)
     
     
 
